@@ -1,5 +1,83 @@
+@import "variables";
+@import "fonts";
+@import "animations";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: $black;
+  padding-top: 5vmin;
+}
+
+.description {
+  margin-top: 10vmin;
+  font-family: monospace, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2vmin;
+  letter-spacing: 2px;
+  line-height: 200%;
+  color: $white;
+}
+
+.keyboard {
+  max-width: 115vmin;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1vmin;
+  border: 1vmin solid $black;
+}
+
+.button {
+  user-select: none;
+  font-family: fantasy;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vmin;
+  text-transform: uppercase;
+  color: #2c962c;
+  background-color: black;
+  min-width: 6vmin;
+  height: 7vmin;
+  box-shadow: 0 0 1vmin #26c326;
+  text-shadow: 0 0 1vmin;
+  border-radius: 1vmin;
+  margin: .7vmin;
+  padding: 3vmin;
+
+  &.active {
+    background-color: #111d12;
+    animation: scale-down-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+  }
+}
+
+.score {
+  font-family: 'DaysOne-Regular', sans-serif;
+  text-align: center;
+  font-size: 5vmin;
+  color: $white;
+}
+
+.author {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2vmin;
+  display: block;
+  font-family: $daysOne;
+  font-size: 1.2vmin;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #474747;
+  transition: .2s ease;
+  max-width: 11vmin;
+  &:hover {
+    color: white;
+  }
 }
