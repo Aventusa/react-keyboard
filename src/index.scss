@@ -14,7 +14,7 @@ body {
 }
 
 .description {
-  margin-top: 10vmin;
+  margin-top: 5vmin;
   font-family: monospace, sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -77,7 +77,21 @@ body {
   color: #474747;
   transition: .2s ease;
   max-width: 11vmin;
+
   &:hover {
     color: white;
   }
+}
+
+.life-bar {
+  text-align: center;
+  height: 7vmin;
+}
+
+.life {
+  display: inline-flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 7vmin;
+  height: 7vmin;
 }

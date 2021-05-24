@@ -4,7 +4,7 @@ import Button from './Button';
 import {buttons} from '../buttons'
 import getRandomIndex from '../utils';
 
-function Keyboard({changeScore}) {
+function Keyboard({changeScore, changeLife}) {
 
     const [index, setIndex] = useState(getRandomIndex(buttons))
 
@@ -26,6 +26,8 @@ function Keyboard({changeScore}) {
 
             changeScore(prev => prev + 5)
             setIndex(getRandomIndex(buttons))
+        } else {
+            changeLife()
         }
     }
 
@@ -37,7 +39,8 @@ function Keyboard({changeScore}) {
 }
 
 Keyboard.propTypes = {
-    changeScore: PropTypes.func
+    changeScore: PropTypes.func,
+    changeLife: PropTypes.func
 }
 
 export default Keyboard;
